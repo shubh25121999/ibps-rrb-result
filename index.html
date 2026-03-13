@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Recruitment Process for RRBs (CRP RRBs XIV) - Final Result</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <style>
+        /* IBPS Stylesheets se nikale gaye custom styles */
+        body { 
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; 
+            background-color: #f4f6f8; /* Thoda light background form ke liye */
+            color: #333;
+        }
+
+        .box { 
+            border: 1px solid #000; 
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            background-color: #fff;
+        }
+
+        .container { 
+            font-size: 13px !important; 
+            line-height: 1.4 !important; 
+            max-width: 960px;
+        }
+
+        .margin-10px { margin-top: 10px !important; }
+        .top-buffer { margin-top: 2px !important; }
+        .space-5px { margin-bottom: 10px !important; }
+        .text_bold { font-weight: bold; }
+
+        /* Table ke specific styles */
+        .table > tbody > tr > td, 
+        .table-bordered > tbody > tr > td, 
+        .table > tr > td, 
+        .table-bordered > tr > td,
+        .table > thead > tr > th,
+        .table-bordered > thead > tr > th { 
+            border: 1px solid #666; 
+            color: #333; 
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+            font-size: 13px; 
+            line-height: 1.42857; 
+            padding: 6px 8px; 
+            vertical-align: middle;
+        }
+
+        .table thead th {
+            background-color: #f8f9fa;
+        }
+
+        .center-block { 
+            display: block; 
+            margin-right: auto; 
+            margin-left: auto; 
+        }
+
+        .main_title h5 {
+            font-size: 15px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .status-box {
+            border: 2px dashed #17a2b8;
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Login Box ke styles */
+        .login-wrapper {
+            margin-top: 100px;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .login-card {
+            border: 1px solid #ccc;
+            border-top: 4px solid #1d79c5;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Chhoti screens ke liye responsive styles */
+        @media (max-width: 70em) {
+            .res-text-small { font-size: 11px !important; }
+            .table > tbody > tr > td,
+            .table > thead > tr > th { font-size: 11px !important; }
+        }
+
+        /* Print karne ke liye styles */
+        @media print {
+            body { margin: 0; padding: 0; background-color: #fff;}
+            .box { border: 2px solid #000 !important; margin-top: 0; }
+            .container { width: 100% !important; max-width: 100% !important; }
+            .status-box { border: 2px dashed #000; background-color: transparent; }
+            #login-section { display: none !important; }
+            #scorecard-section { display: block !important; }
+            @page { margin: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Section: Pehle ye dikhega -->
+    <div id="login-section" class="container login-wrapper">
+        <div class="text-center mb-4">
+            <img src="https://ibpsreg.ibps.in/rrbxivaug25/scda_jan26/english/header.jpg" 
+                 alt="IBPS Header" 
+                 class="img-responsive center-block" 
+                 width="100%" 
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/470x100/1d79c5/ffffff?text=IBPS+Recruitment+Process';">
+        </div>
+        <div class="card login-card">
+            <div class="card-header text-center font-weight-bold" style="background-color: #f8f9fa;">
+                Login Credentials
+            </div>
+            <div class="card-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="rollNo">Registration No / Roll No</label>
+                        <input type="text" class="form-control" id="rollNo" required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Password / DOB (DD-MM-YY)</label>
+                        <input type="password" class="form-control" id="dob" required autocomplete="off">
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary px-4 mr-2">Login</button>
+                        <button type="reset" class="btn btn-secondary px-4">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scorecard Section: Login ke baad ye dikhega -->
+    <!-- Starting mein isko hide rakha gaya hai (display: none) -->
+    <div id="scorecard-section" style="display: none;">
+        <div class="container box">
+            <div class="row top-buffer">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                
+                    <!-- Logo aur header image -->
+                    <div class="col-md-12">
+                        <div class="text-center mt-2 mb-3">	
+                            <img src="https://ibpsreg.ibps.in/rrbxivaug25/scda_jan26/english/header.jpg" 
+                                alt="IBPS Header" 
+                                class="img-responsive center-block" 
+                                width="470" 
+                                height="100"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/470x100/1d79c5/ffffff?text=IBPS+Recruitment+Process';">	
+                        </div>        
+                    </div>
+
+                    <!-- Main Heading -->
+                    <div class="main_title text-center">
+                        <h5 class="text-center"><u><strong>Result of Online Main Examination for Recruitment of Office Assistants<br>(Multipurpose) (CRP-RRBs-XIV) in Regional Rural Banks</strong></u></h5>
+                    </div>
+                    
+                    <!-- Candidate ki details ka table -->
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="text-center margin-10px">
+                                <table class="table table-bordered table-hover res-text-small">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left" style="width: 40%;">Name of the candidate</td>
+                                            <td class="text-left" style="font-weight: bold;">ASHUTOSH KUMAR SINGH</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">Roll No.</td>
+                                            <td class="text-left">3056020526</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">Registration No.</td>
+                                            <td class="text-left">2601136613</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">Date of Online Main Examination</td>
+                                            <td class="text-left">28/02/26</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">Category</td>
+                                            <td class="text-left">OBC(NCL)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">State Applied for</td>
+                                            <td class="text-left">UTTAR PRADESH</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+
+                    <!-- Final Result Status Box -->
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="status-box text-center margin-10px">
+                                <h6 style="color: #0c5460; font-size: 16px; line-height: 1.5; margin: 0;">
+                                    <strong>Final Result Status:</strong> Congratulations! You have successfully qualified the Online Preliminary and Main Examinations.<br> 
+                                    You have been kept in the <strong>Reserve List</strong> for provisional allotment.
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    
+                    <!-- Scores Table -->
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="text-center margin-10px">
+                                <h5 style="text-decoration: underline; font-weight: bold; margin-bottom: 15px; font-size: 14px;">
+                                    Details of Online Main Examination Scores
+                                </h5>
+                                <table class="table table-bordered table-hover res-text-small">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" style="width: 40%;">Section / Details</th>
+                                            <th class="text-center">Maximum Score</th>
+                                            <th class="text-center">Cutoff Score (OBC)</th>
+                                            <th class="text-center">Obtained Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left"><strong>Total Weighted Score (Out of 100)</strong></td>
+                                            <td class="text-center">100.00</td>
+                                            <td class="text-center">65.50</td>
+                                            <td class="text-center" style="font-weight: bold; color: #0056b3;">
+                                                64.75**
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="text-left" style="font-size: 12px; margin-top: 5px;">
+                                    <p>** &nbsp;&nbsp;&nbsp;Your score falls within the cutoff criteria for the Reserve List.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    
+                    <!-- Footer Note -->
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="margin-10px text-justify">
+                                <p class="space-5px">For details on <b><u>Process of Arriving at Scores</u></b>, please refer to official IBPS website www.ibps.in</p>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+
+                    <div class="row top-buffer">    
+                        <div class="col-md-12">&nbsp;</div>    
+                    </div>
+                
+                </div> 
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Result ko show karne ke liye -->
+    <script>
+        // Form submit hone par event listener
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Page refresh hone se rokne ke liye
+            
+            // Login section ko hide karein
+            document.getElementById('login-section').style.display = 'none';
+            
+            // Scorecard section ko display karein aur background ko white karein IBPS jaisa
+            document.getElementById('scorecard-section').style.display = 'block';
+            document.body.style.backgroundColor = '#fff';
+        });
+    </script>
+
+</body>
+</html>
